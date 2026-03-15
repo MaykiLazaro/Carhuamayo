@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Municipalidad Distrital de Carhuamayo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+<h2>CARHUAMAYO</h2>
+</div>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Historia</a></li>
+<li><a href="#">Festividades</a></li>
+
+<li class="dropdown">
+
+<a href="#">Instituciones</a>
+
+<ul class="submenu">
+
+<li><a href="#">Educativas</a></li>
+<li><a href="#">Salud</a></li>
+<li><a href="#">Municipales</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="#">Galería</a></li>
+<li><a href="#">Biblioteca</a></li>
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- SLIDER PRINCIPAL -->
+
+<section class="slider">
+
+<div class="slide active">
+
+<img src="imagenes/banner1.jpg">
+
+<div class="hero-text">
+
+<h1>Bienvenidos a Carhuamayo</h1>
+<p>Portal del distrito</p>
+
+</div>
+
+</div>
+
+<div class="slide">
+
+<img src="imagenes/banner2.jpg">
+
+</div>
+
+<div class="slide">
+
+<img src="imagenes/banner3.jpg">
+
+</div>
+
+</section>
+
+<!-- HISTORIA -->
+
+<section class="section">
+
+<h2>Historia de Carhuamayo</h2>
+
+<p>
+
+Carhuamayo es un distrito histórico ubicado en la región Junín,
+conocido por su riqueza cultural, sus tradiciones y su importante
+historia dentro de la provincia de Junín.
+
+</p>
+
+</section>
+
+<!-- FESTIVIDADES -->
+
+<section class="section">
+
+<h2>Nuestras Festividades</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="imagenes/festividad1.jpg">
+
+<h3>Santa Rosa de Lima</h3>
+
+<p>28 de agosto al 4 de septiembre</p>
+
+</div>
+
+<div class="card">
+
+<img src="imagenes/festividad2.jpg">
+
+<h3>Santa María de las Nieves</h3>
+
+</div>
+
+<div class="card">
+
+<img src="imagenes/festividad3.jpg">
+
+<h3>Virgen del Perpetuo Socorro</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section class="section">
+
+<h2>Galería de Carhuamayo</h2>
+
+<div class="gallery">
+
+<img src="imagenes/g1.jpg">
+<img src="imagenes/g2.jpg">
+<img src="imagenes/g3.jpg">
+<img src="imagenes/g4.jpg">
+
+</div>
+
+</section>
+
+<!-- COMUNIDADES -->
+
+<section class="communities">
+
+<h2>Comunidades Campesinas</h2>
+
+<div class="scroll">
+
+<div class="community">Capillas</div>
+<div class="community">Matacancha</div>
+<div class="community">Condorcocha</div>
+<div class="community">Santa Rosa</div>
+<div class="community">Carhuamayo</div>
+
+</div>
+
+</section>
+
+<!-- BUSCADOR DOCUMENTOS -->
+
+<section class="search">
+
+<h2>Buscar Documentos</h2>
+
+<input type="text" placeholder="Buscar documento...">
+
+</section>
+
+<!-- BIBLIOTECA DIGITAL -->
+
+<section class="biblioteca">
+
+<h2>Biblioteca Digital</h2>
+
+<div class="pdf-grid">
+
+<div class="pdf-card">
+
+<h3>Monografía de Carhuamayo</h3>
+
+<button>Ver documento</button>
+
+</div>
+
+<div class="pdf-card">
+
+<h3>Expediente Civil</h3>
+
+<button>Ver documento</button>
+
+</div>
+
+<div class="pdf-card">
+
+<h3>Electrificación</h3>
+
+<button>Ver documento</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAPA -->
+
+<section class="map-section">
+
+<h2>Mapa del Distrito</h2>
+
+<div id="map"></div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Municipalidad Distrital de Carhuamayo</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+
+</body>
+
+</html>
