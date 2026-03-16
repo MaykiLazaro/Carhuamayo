@@ -1,0 +1,316 @@
+/* ====== ESTILO GENERAL ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ====== HEADER ====== */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.logo h2 {
+    color: #c89b2c;
+    letter-spacing: 1px;
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #c89b2c;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    background-color: #2f4f3a;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #c89b2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #a67c20;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(200, 155, 44, 0.4);
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: #2f4f3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-leer-mas:hover {
+    background: #1e3526;
+}
+
+/* ===== SECCIONES ===== */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2, .communities h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: #c89b2c;
+}
+
+/* ===== CARDS (Usado en Festividades y Biblioteca) ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.4s;
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 { 
+    padding: 20px 15px 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.card p {
+    padding: 0 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===== COMUNIDADES ===== */
+.communities {
+    background: #2f4f3a;
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #c89b2c #1e3526;
+}
+
+.community {
+    min-width: 220px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.community:hover {
+    background: white;
+    color: #2f4f3a;
+}
+
+/* ===== FOOTER ====== */
+footer {
+    background: #111;
+    color: white;
+    padding: 60px 10% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #c89b2c;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    margin-right: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #c89b2c;
+    transform: translateY(-5px);
+}
+
+.whatsapp-link {
+    color: #25D366 !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== ANIMACIONES JS ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+    .nav { padding: 15px 5%; }
+    .menu { display: none; }
+    .hero-text { left: 5%; right: 5%; }
+    .hero-text h1 { font-size: 32px; }
+    .section { padding: 60px 5%; }
+}
