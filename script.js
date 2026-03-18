@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 /* ===================================
 SLIDER AUTOMATICO
 =================================== */
@@ -14,7 +16,7 @@ function cambiarSlide(){
 setInterval(cambiarSlide, 5000);
 
 /* ===================================
-ANIMACIONES AL HACER SCROLL (MEJORADO)
+ANIMACIONES SCROLL
 =================================== */
 const revealElements = document.querySelectorAll(".section, .communities, .card");
 
@@ -35,26 +37,39 @@ revealElements.forEach(el => {
 });
 
 window.addEventListener("scroll", animarScroll);
-
-window.onload = () => {
-    animarScroll();
-};
+animarScroll();
 
 /* ===================================
-LOGICA DE NAVEGACION
+MENU HAMBURGUESA (FIX REAL)
 =================================== */
-document.querySelectorAll('a').forEach(anchor => {
-    anchor.addEventListener("click", function(e){
-        const href = this.getAttribute("href");
-        if (href && href.includes(".html")) {
-            return; 
-        }
-        if(href && href.startsWith("#") && href !== "#") {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if(target) {
-                target.scrollIntoView({ behavior: "smooth" });
-            }
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+if(toggle && menu){
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".menu a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
+    });
+}
+
+/* ===================================
+HEADER SCROLL
+=================================== */
+const header = document.getElementById("header");
+
+if(header){
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
         }
     });
+}
+
 });
